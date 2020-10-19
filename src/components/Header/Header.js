@@ -12,10 +12,10 @@ const generalOptions = (
 
 const Header = () => (
     <Navbar>
-        <Navbar.Brand href="/home">
+        <Navbar.Brand href="/">
             <h2>Welcome to ...!!</h2>
         </Navbar.Brand>
-        <Navbar.Toggle />
+        {/* <Navbar.Toggle aria-controls="basic-navbar-nav" /> */}
         <Navbar.Collapse>
             <Nav className="nav-links">
                 {generalOptions}
