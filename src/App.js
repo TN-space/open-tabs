@@ -1,18 +1,20 @@
 import React, { useState, useEffect, Fragment } from 'react';
 import './App.css';
 import Header from './components/Header/Header'
-import Home from './components/Home'
-import About from './components/About'
+import Home from './components/pages/Home'
+import About from './components/pages/About'
 import { BrowserRouter as Router, Route, Switch, Redirect } from 'react-router-dom'
-import { Form } from 'react-bootstrap'
 import SearchData from './components/SearchData'
+import { Form } from 'react-bootstrap'
+
+// import SearchBar from './components/SearchBar'
 
 export const SearchContext = React.createContext()
 
 function App() {
+
   const [searchInput, setSearchInput] = useState('')
   const [redirect, setRedirect] = useState(null)
-
 
   const handleChange = (event) => {
     setSearchInput(event.target.value)
@@ -32,6 +34,7 @@ function App() {
     }
   }
 
+
   // put the redirect into the big return (next step)
   // if (redirect) {
   //   return (
@@ -50,6 +53,11 @@ function App() {
     <Fragment>
       <SearchContext.Provider value={searchInput}>
         <Header />
+        {/* <SearchBar /> */}
+        <Form onSubmit={getSearchResult}>
+          <input type="text" onChange={handleChange} placeholder="search for breweries..."></input>
+          <button type="submit">search</button>
+        </Form>
         <Router>
           <Switch>
             <Route exact path="/" component={Home} />
@@ -60,12 +68,7 @@ function App() {
           {redirect ? <Redirect to={redirect} /> : null}
         </Router>
 
-        <Form onSubmit={getSearchResult}>
-          <input type="text" onChange={handleChange} placeholder="search for breweries..."></input>
-          <button type="submit">search</button>
-        </Form>
       </SearchContext.Provider>
-
     </Fragment>
 
   );
