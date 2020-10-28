@@ -2,21 +2,18 @@ import React, { useState, useEffect, useContext } from 'react'
 import { searchDataConfig } from './Config'
 import { SearchContext } from '../App'
 
-const SearchData = (props) => {
+const SearchData = () => {
     const [searchData, setSearchData] = useState(null)
-    const searchContextTerm = useContext(SearchContext)
-    console.log('searchData props, contextTerm', searchContextTerm)
-    console.log('searchData props, input', props)
+    const searchContextInput = useContext(SearchContext)
+    console.log('searchData, contextTerm:', searchContextInput)
 
 
-    // useEffect(() => {
-    //     console.log('used Effect');
-
-    //     searchDataConfig(searchTerm)
-    //         .then(res => console.log(res))
-    //         // .then(res => setSearchData(res))
-    //         .catch(error => console.error(error))
-    // }, [])
+    useEffect(() => {
+        searchDataConfig(searchContextInput)
+            .then(res => console.log(res.data))
+            // .then(res => setSearchData(res))
+            .catch(error => console.error(error))
+    }, [])
 
     return (
         <div>

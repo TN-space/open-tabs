@@ -20,7 +20,6 @@ function App() {
 
   const getSearchResult = (event) => {
     event.preventDefault()
-    console.log(searchInput);
 
     let isSpaces = searchInput.split('').every((char) => char === ' ');
     // If user hasn't typed anything, don't let them hit enter and go to empty search result page
@@ -46,7 +45,7 @@ function App() {
   // }
 
   // {/* <Route exact path="/search/:result" component={SearchData} /> */ }
-  // <SearchData render={() =>
+
   return (
     <Fragment>
       <SearchContext.Provider value={searchInput}>
@@ -58,9 +57,9 @@ function App() {
             <Route exact path="/search/:result" render={(props) => <SearchData {...props} />} />
 
           </Switch>
-
           {redirect ? <Redirect to={redirect} /> : null}
         </Router>
+
         <Form onSubmit={getSearchResult}>
           <input type="text" onChange={handleChange} placeholder="search for breweries..."></input>
           <button type="submit">search</button>
