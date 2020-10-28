@@ -1,12 +1,18 @@
-import React, { useState } from 'react'
-// import { getSearchData } from './components/Config'
+import React, { useState, useEffect, useContext } from 'react'
+import { searchDataConfig } from './Config'
+import { SearchContext } from '../App'
 
 const SearchData = (props) => {
     const [searchData, setSearchData] = useState(null)
-    console.log('searchData props', props)
+    const searchContextTerm = useContext(SearchContext)
+    console.log('searchData props, contextTerm', searchContextTerm)
+    console.log('searchData props, input', props)
+
 
     // useEffect(() => {
-    //     getSearchData(searchInput)
+    //     console.log('used Effect');
+
+    //     searchDataConfig(searchTerm)
     //         .then(res => console.log(res))
     //         // .then(res => setSearchData(res))
     //         .catch(error => console.error(error))

@@ -4,7 +4,7 @@ import Navbar from 'react-bootstrap/Navbar'
 
 const generalOptions = (
     <Fragment>
-        <Nav.Link href="/home">Home</Nav.Link>
+        <Nav.Link href="/">Home</Nav.Link>
         <Nav.Link href="/about">About</Nav.Link>
 
     </Fragment>

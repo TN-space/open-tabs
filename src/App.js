@@ -1,16 +1,17 @@
-import React, { Fragment, useState, useEffect } from 'react';
+import React, { useState, useEffect, Fragment } from 'react';
 import './App.css';
 import Header from './components/Header/Header'
 import Home from './components/Home'
 import About from './components/About'
-import { Redirect, Route, Switch } from 'react-router-dom'
+import { BrowserRouter as Router, Route, Switch, Redirect } from 'react-router-dom'
 import { Form } from 'react-bootstrap'
 import SearchData from './components/SearchData'
 
+export const SearchContext = React.createContext()
 
 function App() {
   const [searchInput, setSearchInput] = useState('')
-  const [redirect, setRedirect] = useState(false)
+  const [redirect, setRedirect] = useState(null)
 
 
   const handleChange = (event) => {
@@ -19,38 +20,55 @@ function App() {
 
   const getSearchResult = (event) => {
     event.preventDefault()
+    console.log(searchInput);
+
     let isSpaces = searchInput.split('').every((char) => char === ' ');
     // If user hasn't typed anything, don't let them hit enter and go to empty search result page
     if (searchInput === '') {
-      setRedirect(false);
+      setRedirect(null);
     } else if (isSpaces) {
-      setRedirect(false);
+      setRedirect(null);
     } else {
-      setRedirect(true);
+      setRedirect(`/search/${searchInput}`);
     }
   }
 
-  if (redirect) {
-    return (
-      <Redirect
-        to={{ pathname: `/search/${searchInput}`, state: { searchTerm: searchInput } }}
-      />
-    );
-  }
+  // put the redirect into the big return (next step)
+  // if (redirect) {
+  //   return (
+  //     <Router>
+  //       <Redirect
+  //         to={{ pathname: `/search/${searchInput}`, state: { searchInput } }}
+  //       />
+  //       <SearchData />
+  //     </Router>
+  //   );
+  // }
+
+  // {/* <Route exact path="/search/:result" component={SearchData} /> */ }
+  // <SearchData render={() =>
   return (
     <Fragment>
-      <Header />
-      <Switch>
-        <Route exact path="/home" component={Home} />
-        <Route exact path="/about" component={About} />
-      </Switch>
+      <SearchContext.Provider value={searchInput}>
+        <Header />
+        <Router>
+          <Switch>
+            <Route exact path="/" component={Home} />
+            <Route exact path="/about" component={About} />
+            <Route exact path="/search/:result" render={(props) => <SearchData {...props} />} />
 
-      <Form onSubmit={getSearchResult}>
-        <input type="text" onChange={handleChange} placeholder="search for breweries..."></input>
-        <input type="submit" onClick={getSearchResult}></input>
-      </Form>
+          </Switch>
+
+          {redirect ? <Redirect to={redirect} /> : null}
+        </Router>
+        <Form onSubmit={getSearchResult}>
+          <input type="text" onChange={handleChange} placeholder="search for breweries..."></input>
+          <button type="submit">search</button>
+        </Form>
+      </SearchContext.Provider>
 
     </Fragment>
+
   );
 }
 
