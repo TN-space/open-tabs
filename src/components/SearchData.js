@@ -3,10 +3,12 @@ import { searchDataConfig } from './Config'
 import { SearchContext } from '../App'
 import { Link } from 'react-router-dom'
 
-const SearchData = () => {
+const SearchData = (props) => {
+    console.log('props', props);
     const [searchData, setSearchData] = useState(null)
     const searchContextInput = useContext(SearchContext)
-    // console.log('searchData, contextTerm:', searchContextInput)
+    let param = props.match.params.result
+    console.log('param:', param)
 
 
     useEffect(() => {
@@ -14,7 +16,7 @@ const SearchData = () => {
             // .then(res => console.log(res.data))
             .then(res => setSearchData(res.data))
             .catch(error => console.error(error))
-    }, [])
+    }, [param])
     console.log('data', searchData);
     // console.log('data.brew', searchData[1]);
 
