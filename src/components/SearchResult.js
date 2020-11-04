@@ -1,30 +1,48 @@
 import React, { useState, useEffect, useContext } from 'react'
-import { searchDataConfig } from './Config'
+import { searchResultConfig } from './Config'
 import { SearchContext } from '../App'
 import { Link } from 'react-router-dom'
 
-const SearchData = (props) => {
-    console.log('props', props);
+const SearchResult = (props) => {
     const [searchData, setSearchData] = useState(null)
     const searchContextInput = useContext(SearchContext)
     let param = props.match.params.result
-    console.log('param:', param)
+    let fetched, retrieved
+
 
 
     useEffect(() => {
-        searchDataConfig(searchContextInput)
+        searchResultConfig(searchContextInput)
             // .then(res => console.log(res.data))
             .then(res => setSearchData(res.data))
             .catch(error => console.error(error))
     }, [param])
-    console.log('data', searchData);
-    // console.log('data.brew', searchData[1]);
 
+    // console.log('pathname:', window.location.pathname.substr(8));
 
-
-    if (!searchData) {
+    if (!searchData && !fetched) {
         return 'please wait...'
-    } else {
+    }
+    // else if (retrieved) {
+
+    //     return (
+    //         <div className='brewery-container'>
+    //             <h2>Retrieved Result!!</h2>
+    //             {retrieved.map((brewery) => (
+    //                 <Link key={brewery.id} className='brewery-link' to={{
+    //                     pathname: `brewery/${brewery.id}`, state: { id: `${brewery.id}` }
+    //                 }}>
+    //                     <li key={retrieved.id} className='brewery-name'>{brewery.name} ({brewery.city}, {brewery.state})</li>
+    //                 </Link>
+    //             ))}
+    //         </div>
+    //     )
+    // } 
+    else {
+        // localStorage.setItem('fetched', searchData)
+        // retrieved = localStorage.getItem('fetched')
+        // console.log('retrieved:', retrieved);
+
         const { id, name, website_url, brewery_type, phone, country, state, city, street, postal_code } = searchData
 
         return (
@@ -43,4 +61,4 @@ const SearchData = (props) => {
 
 }
 
-export default SearchData
+export default SearchResult

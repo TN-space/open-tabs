@@ -6,7 +6,8 @@ import Header from './components/Header/Header'
 import Home from './components/pages/Home'
 import About from './components/pages/About'
 import Search from './components/pages/Search'
-import SearchData from './components/SearchData'
+import SearchResult from './components/SearchResult'
+import Brewery from './components/Brewery'
 
 export const SearchContext = React.createContext()
 
@@ -46,7 +47,8 @@ function App() {
           <Switch>
             <Route exact path="/" component={Home} />
             <Route exact path="/about" component={About} />
-            <Route exact path="/search/:result" render={(props) => <SearchData {...props} />} />
+            <Route exact path="/search/:result" render={(props) => <SearchResult {...props} />} />
+            <Route exact path="/search/brewery/:id" render={(props) => <Brewery {...props} />} />
 
           </Switch>
           {redirect ? <Redirect to={redirect} /> : null}
