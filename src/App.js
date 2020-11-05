@@ -48,6 +48,7 @@ function App() {
     backgroundAttachment: 'fixed',
     zIndex: '-7'
   };
+
   return (
     <div style={style}>
       <SearchContext.Provider value={searchInput}>

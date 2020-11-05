@@ -1,13 +1,12 @@
 import React, { useEffect, useState } from 'react'
+import { useHistory } from "react-router-dom";
 import Loading from './utilities/Loading'
-import { First } from 'react-bootstrap/esm/PageItem'
 import { lookUpBreweryConfig } from './utilities/Config'
 
 const Brewery = (props) => {
     const [brewery, setBrewery] = useState(null)
     const id = props.match.params.id
-    // console.log(props.match.params.id);
-
+    let history = useHistory()
 
     useEffect(() => {
         lookUpBreweryConfig(id)
@@ -37,9 +36,8 @@ const Brewery = (props) => {
                     <p>{street}</p>
                     <p>{city}, {state}</p>
                     <p>{postal_code}</p>
-
-
                 </div>
+                <button onClick={() => history.goBack()}>back</button>
             </div>
         )
     }
