@@ -29,11 +29,16 @@ const Brewery = (props) => {
         }
 
         return (
-            <div>
-                <h1>Brewery</h1>
-                <div className="brew-container">
-                    <h3>{name}</h3>
-                    <p>{formatedPhone}</p>
+            <div className='brewery-container'>
+                <h3>{name}</h3>
+                <p>{formatedPhone}</p>
+                <p><a href={website_url} target='_blank'>{website_url}</a></p>
+                <div className='address-container'><p>Address</p>
+                    <p>{street}</p>
+                    <p>{city}, {state}</p>
+                    <p>{postal_code}</p>
+
+
                 </div>
             </div>
         )
