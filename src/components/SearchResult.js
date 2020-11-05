@@ -1,5 +1,6 @@
 import React, { useState, useEffect, useContext } from 'react'
-import { searchResultConfig } from './Config'
+import Loading from './utilities/Loading'
+import { searchResultConfig } from './utilities/Config'
 import { SearchContext } from '../App'
 import { Link } from 'react-router-dom'
 
@@ -21,7 +22,7 @@ const SearchResult = (props) => {
     // console.log('pathname:', window.location.pathname.substr(8));
 
     if (!searchData && !fetched) {
-        return 'please wait...'
+        return <Loading />
     }
     // else if (retrieved) {
 

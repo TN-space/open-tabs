@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from 'react'
+import Loading from './utilities/Loading'
 import { First } from 'react-bootstrap/esm/PageItem'
-import { lookUpBreweryConfig } from './Config'
-
+import { lookUpBreweryConfig } from './utilities/Config'
 
 const Brewery = (props) => {
     const [brewery, setBrewery] = useState(null)
@@ -17,7 +17,7 @@ const Brewery = (props) => {
     }, [])
 
     if (!brewery) {
-        return 'please wait...'
+        return <Loading />
     } else {
         const { id, name, website_url, brewery_type, phone, street, city, state, postal_code, country } = brewery
         let formatedPhone
