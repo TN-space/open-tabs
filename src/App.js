@@ -1,18 +1,17 @@
-import React, { useState, useEffect, Fragment } from 'react';
+import React, { useState } from 'react';
 import './App.css';
 import { BrowserRouter as Router, Route, Switch, Redirect } from 'react-router-dom'
 import { Form } from 'react-bootstrap'
 import Header from './components/Header/Header'
 import Home from './components/pages/Home'
 import About from './components/pages/About'
-import Search from './components/pages/Search'
 import SearchResult from './components/SearchResult'
 import Brewery from './components/Brewery'
+import hero from './assets/hero.jpg'
 
 export const SearchContext = React.createContext()
 
 function App() {
-
   const [searchInput, setSearchInput] = useState('')
   const [redirect, setRedirect] = useState(null)
 
@@ -35,8 +34,22 @@ function App() {
     }
   }
 
+  const style = {
+    width: "100vw",
+    height: "100vh",
+    display: 'flex',
+    color: 'white',
+    textDecoration: 'none',
+    listStyleType: 'none',
+    backgroundImage: `url(${hero})`,
+    backgroundRepeat: 'no-repeat',
+    backgroundPosition: 'center center',
+    backgroundSize: 'cover',
+    backgroundAttachment: 'fixed',
+    zIndex: '-7'
+  };
   return (
-    <Fragment>
+    <div style={style}>
       <SearchContext.Provider value={searchInput}>
         <Header />
         <Form onSubmit={getSearchResult}>
@@ -55,7 +68,7 @@ function App() {
         </Router>
 
       </SearchContext.Provider>
-    </Fragment>
+    </div>
 
   );
 }
