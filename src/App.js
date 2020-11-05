@@ -1,5 +1,4 @@
 import React, { useState } from 'react';
-import './App.css';
 import { BrowserRouter as Router, Route, Switch, Redirect } from 'react-router-dom'
 import { Form } from 'react-bootstrap'
 import Header from './components/Header/Header'
@@ -8,6 +7,7 @@ import About from './components/pages/About'
 import SearchResult from './components/SearchResult'
 import Brewery from './components/Brewery'
 import hero from './assets/hero.jpg'
+import './styles/App.scss'
 
 export const SearchContext = React.createContext()
 
@@ -34,13 +34,10 @@ function App() {
     }
   }
 
-  const style = {
+  const imageStyle = {
     width: "100vw",
     height: "100vh",
-    display: 'flex',
-    color: 'white',
-    textDecoration: 'none',
-    listStyleType: 'none',
+    margin: '0',
     backgroundImage: `url(${hero})`,
     backgroundRepeat: 'no-repeat',
     backgroundPosition: 'center center',
@@ -50,7 +47,7 @@ function App() {
   };
 
   return (
-    <div style={style}>
+    <div style={imageStyle} className='App'>
       <SearchContext.Provider value={searchInput}>
         <Header />
         <Form onSubmit={getSearchResult}>

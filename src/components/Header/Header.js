@@ -4,15 +4,15 @@ import Navbar from 'react-bootstrap/Navbar'
 
 const generalOptions = (
     <Fragment>
-        <Nav.Link href="/">Home</Nav.Link>
-        <Nav.Link href="/about">About</Nav.Link>
+        <Nav.Link className='nav-links' href="/">Home</Nav.Link>
+        <Nav.Link className='nav-links' href="/about">About</Nav.Link>
 
     </Fragment>
 )
 
 const Header = () => (
-    <Navbar>
-        <Navbar.Brand href="/">
+    <Navbar className='header-container'>
+        <Navbar.Brand className='welcome-logo' href="/">
             <h2>Welcome...!!</h2>
         </Navbar.Brand>
         {/* <Navbar.Toggle aria-controls="basic-navbar-nav" /> */}
