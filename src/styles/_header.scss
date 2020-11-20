@@ -1,0 +1,9 @@
+.header-container {
+    color: white;
+    .nav-links,.welcome-logo {
+        text-decoration: none;
+        color: inherit;
+    }
+    transition: translateY(-60);
+}
+// make slide-in menu from left to right.
