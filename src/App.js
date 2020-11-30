@@ -35,15 +35,33 @@ function App() {
   }
 
   const imageStyle = {
-    width: "100vw",
-    height: "100vh",
+    width: "100%",
+    height: "100%",
     margin: '0',
-    backgroundImage: `url(${hero})`,
+    // issue: white space surrounding the div
+
+    // backgroundImage: `url(${hero})`,
+    // backgroundRepeat: 'no-repeat',
+    // backgroundPosition: 'center center',
+    // backgroundSize: 'contain',
+    // backgroundAttachment: 'fixed',
+    background:
+      // set gradient
+      `linear-gradient(
+        rgba(0, 0, 0, 0.7),
+        rgba(0, 0, 0, 0.7)
+      ),
+    url(${hero})`,
     backgroundRepeat: 'no-repeat',
-    backgroundPosition: 'center center',
-    backgroundSize: 'cover',
-    backgroundAttachment: 'fixed',
-    zIndex: '-7'
+    backgroundSize: 'contain',
+    backgroundPosition: `50%`,
+    // backgroundAttachment: 'fixed',
+    zIndex: '-7',
+
+
+
+    // background - size: contain;
+
   };
 
   return (
