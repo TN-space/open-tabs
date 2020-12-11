@@ -1,9 +1,29 @@
+
+
 .header-container {
+    position: relative;
+    left: 10px;
     color: white;
     .nav-links,.welcome-logo {
         text-decoration: none;
         color: inherit;
     }
     transition: translateY(-60);
+
+    h2 {
+        height: 5vh;
+        width: 100%;
+        font-size: 40px;
+        margin-bottom: 0;
+    }
+
+    .nav-links {
+        width: 50vw;
+        height: 5vh;
+        display: flex;
+        font-size: 25px;
+        align-items: center;
+        justify-content: space-between;
+        }
 }
 // make slide-in menu from left to right.

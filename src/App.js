@@ -58,8 +58,6 @@ function App() {
     // backgroundAttachment: 'fixed',
     zIndex: '-7',
 
-
-
     // background - size: contain;
 
   };

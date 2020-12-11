@@ -45,10 +45,9 @@ const SearchResult = (props) => {
         // console.log('retrieved:', retrieved);
 
         const { id, name, website_url, brewery_type, phone, country, state, city, street, postal_code } = searchData
-        console.log(searchData);
 
         if (searchData.length === 0) {
-            return 'Results not found!'
+            return (<h1>Results not found!</h1>)
         } else {
             return (
                 <div className='brewery-container'>
