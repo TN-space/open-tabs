@@ -45,19 +45,25 @@ const SearchResult = (props) => {
         // console.log('retrieved:', retrieved);
 
         const { id, name, website_url, brewery_type, phone, country, state, city, street, postal_code } = searchData
+        console.log(searchData);
 
-        return (
-            <div className='brewery-container'>
-                <h2>Search Result!!</h2>
-                {searchData.map((brewery) => (
-                    <Link key={brewery.id} className='brewery-link' to={{
-                        pathname: `brewery/${brewery.id}`, state: { id: `${brewery.id}` }
-                    }}>
-                        <li key={id} className='brewery-name'>{brewery.name} ({brewery.city}, {brewery.state})</li>
-                    </Link>
-                ))}
-            </div>
-        )
+        if (searchData.length === 0) {
+            return 'Results not found!'
+        } else {
+            return (
+                <div className='brewery-container'>
+                    <h2>Search Result!!</h2>
+                    {searchData.map((brewery) => (
+                        <Link key={brewery.id} className='brewery-link' to={{
+                            pathname: `brewery/${brewery.id}`, state: { id: `${brewery.id}` }
+                        }}>
+                            <li key={id} className='brewery-name'>{brewery.name} ({brewery.city}, {brewery.state})</li>
+                        </Link>
+                    ))}
+                </div>
+            )
+        }
+
     }
 
 }
