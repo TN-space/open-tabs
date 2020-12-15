@@ -53,7 +53,7 @@ function App() {
       ),
     url(${hero})`,
     backgroundRepeat: 'no-repeat',
-    backgroundSize: 'contain',
+    backgroundSize: 'cover',
     backgroundPosition: `50%`,
     // backgroundAttachment: 'fixed',
     zIndex: '-7',

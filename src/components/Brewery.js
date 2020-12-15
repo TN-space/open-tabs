@@ -29,15 +29,22 @@ const Brewery = (props) => {
 
         return (
             <div className='brewery-container'>
-                <h3>{name}</h3>
-                <p>{formatedPhone}</p>
-                <p><a href={website_url} target='_blank'>{website_url}</a></p>
-                <div className='address-container'><p>Address</p>
-                    <p>{street}</p>
-                    <p>{city}, {state}</p>
-                    <p>{postal_code}</p>
+                <div className='brewery-info'>
+                    <div>
+                        <h1>{name}</h1>
+                        <p>{formatedPhone}</p>
+                        <p><a href={website_url} target='_blank'>{website_url}</a></p>
+                    </div>
+
+                    <div className='address'>
+                        <p id='address'>Address:</p>
+                        <p>{street}</p>
+                        <p>{city}, {state} {postal_code}</p>
+                    </div>
                 </div>
+
                 <button onClick={() => history.goBack()}>back</button>
+
             </div>
         )
     }
