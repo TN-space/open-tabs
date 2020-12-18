@@ -1,15 +1,40 @@
 
-.brewery-container {
+.brews-container {
 
-    li {
-        color: white;
-        text-decoration: none;
-        list-style-type: none;
-        font-size: 20px;
-      }
+  display: flex;
+  flex-direction: column;
+  margin: 20px;
+ 
+  ul {
+
+    li{
+      list-style-type: circle;
+      color: white;
+    }
+    // li:before{
+    //     content: '';
+    //     display: inline-block;
+    //     height: 30px;
+    //     width: 30px;
+    //     color: white;
+    //     border-radius: 80%;
+    //     // background-image: url("../assets/wheat2.jpg");
+    //     background-color: white;
+    // }
+
+    // li {
+    //   color: white;
+    //   text-decoration: none;
+    //   list-style-type: none;
+    //   font-size: 20px;
+    // }
+    // list-style: square inside url("wheat.png")
+
+  }
+  
       
-    li:visited {
-        color: inherit;
-        text-decoration: none;
-      }
+  // li:visited {
+  //       color: inherit;
+  //       text-decoration: none;
+  //    }
 }

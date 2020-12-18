@@ -50,15 +50,19 @@ const SearchResult = (props) => {
             return (<h1>Results not found!</h1>)
         } else {
             return (
-                <div className='brewery-container'>
+                <div className='brews-container'>
                     <h2>Search Result!!</h2>
                     {searchData.map((brewery) => (
-                        <Link key={brewery.id} className='brewery-link' to={{
-                            pathname: `brewery/${brewery.id}`, state: { id: `${brewery.id}` }
-                        }}>
-                            <li key={id} className='brewery-name'>{brewery.name} ({brewery.city}, {brewery.state})</li>
-                        </Link>
+                        <ul>
+                            <Link key={brewery.id} className='brewery-link' to={{
+                                pathname: `brewery/${brewery.id}`, state: { id: `${brewery.id}` }
+                            }}>
+                                <li key={id} className='brewery-name'>{brewery.name} ({brewery.city}, {brewery.state})</li>
+                            </Link>
+                        </ul>
                     ))}
+
+
                 </div>
             )
         }
