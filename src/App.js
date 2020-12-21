@@ -36,7 +36,8 @@ function App() {
 
   const imageStyle = {
     width: "100%",
-    height: "100%",
+    // when search for 'dog', too many items that extends pass the height -- fix this
+    // height: "100vh",
     margin: '0',
     // issue: white space surrounding the div
 
@@ -58,7 +59,6 @@ function App() {
     // backgroundAttachment: 'fixed',
     zIndex: '-7',
 
-    // background - size: contain;
 
   };
 
