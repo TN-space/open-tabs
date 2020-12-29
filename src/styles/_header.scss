@@ -2,7 +2,7 @@
 
 .header-container {
     position: relative;
-    left: 10px;
+    // left: 10px;
     color: white;
     .nav-links,.welcome-logo {
         text-decoration: none;
@@ -24,6 +24,12 @@
         font-size: 25px;
         align-items: center;
         justify-content: space-between;
+        color: rgb(243, 232, 75);
         }
+
+    .slogan {
+        text-align: center;
+        margin: 0 auto;
+    }
 }
 // make slide-in menu from left to right.

@@ -13,7 +13,7 @@ const generalOptions = (
 const Header = () => (
     <Navbar className='header-container'>
         <Navbar.Brand className='welcome-logo' href="/">
-            <h2>Welcome...!!</h2>
+            {/* <h2>Welcome to Open Tabs!!</h2> */}
         </Navbar.Brand>
         {/* <Navbar.Toggle aria-controls="basic-navbar-nav" /> */}
         <Navbar.Collapse>
@@ -21,6 +21,7 @@ const Header = () => (
                 {generalOptions}
             </Nav>
         </Navbar.Collapse>
+        <h2 className='slogan'>Hey Welcome to Open Tabs</h2>
     </Navbar>
 )
 

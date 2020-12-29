@@ -6,3 +6,48 @@
 @import './brewery';
 
 @import './search-result';
+
+// @import hero from './assets/hero.jpg'
+
+body {
+    margin: 0;
+    background: 
+      // set gradient
+      linear-gradient(
+        rgba(0, 0, 0, 0.7),
+        rgba(0, 0, 0, 0.7)
+      ),
+    url('../assets/hero.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: 50%;
+
+    // backgroundAttachment: 'fixed',
+
+    z-index: -7;
+
+    .search-bar {
+        margin: 20px auto;
+        
+        input {
+            height: 30px;
+            width: 25vw;
+            border-top-left-radius: 5px;
+            border-bottom-left-radius: 5px;   
+            border: none;
+        }
+        button {
+            height: 30px;
+            width: 80px;
+            border-top-right-radius: 5px;
+            border-bottom-right-radius: 5px;
+            border: none;
+            background-color:  rgb(243, 232, 75);
+            cursor: pointer;  
+            &:hover {
+              background-color:  rgb(245, 157, 36);
+              
+            }
+        }
+    }
+}
