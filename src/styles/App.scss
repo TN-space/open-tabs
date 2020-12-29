@@ -30,15 +30,17 @@ body {
         margin: 20px auto;
         
         input {
-            height: 30px;
+            height: 40px;
             width: 25vw;
             border-top-left-radius: 5px;
             border-bottom-left-radius: 5px;   
             border: none;
         }
         button {
-            height: 30px;
+            height: 40px;
             width: 80px;
+            font-size: 15px;
+            font-weight: bold;
             border-top-right-radius: 5px;
             border-bottom-right-radius: 5px;
             border: none;
@@ -46,7 +48,8 @@ body {
             cursor: pointer;  
             &:hover {
               background-color:  rgb(245, 157, 36);
-              
+              color: rgba(255,255,255,1);
+
             }
         }
     }

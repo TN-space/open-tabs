@@ -28,8 +28,8 @@ const Brewery = (props) => {
         }
 
         return (
-            <div className='brewery-container'>
-                <div className='brewery-info'>
+            <div className='brew-container'>
+                <div className='brew-info'>
                     <div>
                         <h1>{name}</h1>
                         <p>{formatedPhone}</p>
@@ -41,9 +41,8 @@ const Brewery = (props) => {
                         <p>{street}</p>
                         <p>{city}, {state} {postal_code}</p>
                     </div>
+                    <button onClick={() => history.goBack()}>back</button>
                 </div>
-
-                <button onClick={() => history.goBack()}>back</button>
 
             </div>
         )

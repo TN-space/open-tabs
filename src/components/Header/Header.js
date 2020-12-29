@@ -4,8 +4,8 @@ import Navbar from 'react-bootstrap/Navbar'
 
 const generalOptions = (
     <Fragment>
-        <Nav.Link className='nav-links' href="/">Home</Nav.Link>
-        <Nav.Link className='nav-links' href="/about">About</Nav.Link>
+        <Nav.Link className='nav-link' href="/">Home</Nav.Link>
+        <Nav.Link className='nav-link' href="/about">About</Nav.Link>
 
     </Fragment>
 )

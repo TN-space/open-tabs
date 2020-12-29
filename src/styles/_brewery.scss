@@ -1,37 +1,57 @@
-.brewery-container {
+.brew-container {
     // border: 1px solid red;
-    width: 80%;
+    width: 60%;
     margin: 3rem;
     font-size: 20px;
     display: block;
     flex-direction: column;
+    align-self: center;
+    padding: 20px 80px;
+    background-color: rgba(255,255,255,0.2);
     // justify-content: center;
     // align-items: center;
 
-    .brewery-info {
+    .brew-info {
         display: flex;
         flex-direction: column;
-        justify-content: space-around;
+        position: relative;
+        margin: 0 auto;
+ 
+        h1{
+            // text-transform: uppercase;
+        }
+
+        a {
+            text-decoration: none;
+            color: inherit;
+            &:hover{
+                font-size: 25px;
+                color: rgb(245, 157, 36);
+            }
+        }
 
         .address {
             #address {
                 font-weight: bold;
-                // font-size: 25px;
+                text-transform: uppercase
             }
-
         }
-    }
-    
- 
-    // button {
-    //     display: flex;
-    //     justify-content: space-evenly;
-    //     align-items: center;
-    //     margin: auto;
-    // }
 
-    a {
-        text-decoration: none;
-        color: inherit;
+        button {
+            height: 40px;
+            width: 80px;
+            font-size: 15px;
+            font-weight: bold;
+            border-radius: 5px;
+            border: none;
+            background-color:  rgb(243, 232, 75);
+            cursor: pointer;  
+            &:hover {
+              background-color:  rgb(245, 157, 36);
+              color: rgba(255,255,255,1);
+              
+            }
+        }
+
     }
 }
