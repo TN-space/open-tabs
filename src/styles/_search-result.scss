@@ -5,15 +5,19 @@
   flex-direction: column;
   // margin: 20px;
   font-size: 25px;
+  padding-bottom: 100px;
  
   ul {
-    margin: 10px;
+    margin: 7px;
 
     a {
       text-decoration: none;
     }
 
     li{
+      display: flex;
+      align-items: center;
+      padding: 3px 0;
       list-style-type: none;
       color: white;
       &:hover {

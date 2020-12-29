@@ -6,7 +6,7 @@
     display: block;
     flex-direction: column;
     align-self: center;
-    padding: 20px 80px;
+    padding: 20px 80px 50px;
     background-color: rgba(255,255,255,0.2);
     // justify-content: center;
     // align-items: center;
@@ -25,7 +25,7 @@
             text-decoration: none;
             color: inherit;
             &:hover{
-                font-size: 25px;
+                // font-size: 25px;
                 color: rgb(245, 157, 36);
             }
         }
@@ -40,12 +40,14 @@
         button {
             height: 40px;
             width: 80px;
-            font-size: 15px;
+            font-size: 20px;
             font-weight: bold;
             border-radius: 5px;
             border: none;
             background-color:  rgb(243, 232, 75);
             cursor: pointer;  
+            outline: none;
+
             &:hover {
               background-color:  rgb(245, 157, 36);
               color: rgba(255,255,255,1);

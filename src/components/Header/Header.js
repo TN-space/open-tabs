@@ -21,7 +21,9 @@ const Header = () => (
                 {generalOptions}
             </Nav>
         </Navbar.Collapse>
-        <h2 className='slogan'>Hey Welcome to Open Tabs</h2>
+        <h2 className='welcome'>
+            Welcome to <span className='o'>O</span><span>pen</span> <span className='t'>T</span><span>abs</span>
+        </h2>
     </Navbar>
 )
 

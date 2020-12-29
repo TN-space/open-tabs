@@ -66,7 +66,7 @@ function App() {
       <SearchContext.Provider value={searchInput}>
         <Header />
         <Form className="search-bar" onSubmit={getSearchResult}>
-          <input type="text" onChange={handleChange} placeholder="search for breweries..."></input>
+          <input type="text" onChange={handleChange} placeholder="ex: Massachusetts, cider..."></input>
           <button type="submit">search</button>
         </Form>
         <Router>
