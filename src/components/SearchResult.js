@@ -3,6 +3,7 @@ import Loading from './utilities/Loading'
 import { searchResultConfig } from './utilities/Config'
 import { SearchContext } from '../App'
 import { Link } from 'react-router-dom'
+import { GiBottleCap } from 'react-icons/gi'
 
 const SearchResult = (props) => {
     const [searchData, setSearchData] = useState(null)
@@ -51,13 +52,17 @@ const SearchResult = (props) => {
         } else {
             return (
                 <div className='brews-container'>
-                    <h2>Search Result!!</h2>
+                    {/* <h2>Search Result!!</h2> */}
                     {searchData.map((brewery) => (
                         <ul>
-                            <Link key={brewery.id} className='brewery-link' to={{
+                            <Link key={brewery.id} className='brew-link' to={{
                                 pathname: `brewery/${brewery.id}`, state: { id: `${brewery.id}` }
                             }}>
-                                <li key={id} className='brewery-name'>{brewery.name} ({brewery.city}, {brewery.state})</li>
+                                <li key={id} className='brew-name'>
+                                    <span className='bottleCap'><GiBottleCap /></span>
+                                    {brewery.name}
+                                    <span className='location'>({brewery.city}, {brewery.state})</span>
+                                </li>
                             </Link>
                         </ul>
                     ))}
