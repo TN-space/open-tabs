@@ -1,4 +1,8 @@
 
+$orange-shade: rgb(245, 157, 36);
+$yellow-tint:  rgb(243, 232, 75);
+$transparent-white: rgba(255,255,255,0.2);
+
 @import './app';
 
 @import './header';
@@ -25,9 +29,6 @@ body {
     background-repeat: no-repeat;
     background-size: cover;
     background-position: 50%;
-
-    // backgroundAttachment: 'fixed',
-
     z-index: -7;
 
     .search-bar {
@@ -51,12 +52,12 @@ body {
             border-top-right-radius: 5px;
             border-bottom-right-radius: 5px;
             border: none;
-            background-color:  rgb(243, 232, 75);
+            background-color:  $yellow-tint;
             outline: none;
 
             cursor: pointer;  
             &:hover {
-              background-color:  rgb(245, 157, 36);
+              background-color: $orange-shade;
               color: rgba(255,255,255,1);
 
             }

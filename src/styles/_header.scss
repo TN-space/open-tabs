@@ -2,8 +2,7 @@
 
 .header-container {
     position: relative;
-    // left: 10px;
-    color: white;
+    color: rgba(255,255,255,1);
 
     // .nav-links,.welcome-logo {
     //     text-decoration: none;
@@ -12,19 +11,18 @@
     // transition: translateY(-60);
 
        .nav-links {
-        // width: 50vw;
         height: 5vh;
         display: flex;
         font-size: 25px;
         align-items: center;
-        background-color: rgba(255,255,255,0.2);   
+        background-color: $transparent-white;   
 
         .nav-link{
             text-decoration: none;
-            color: rgb(243, 232, 75);
+            color: $yellow-tint;
             margin: 0 20px;
             &:hover{
-                color: rgb(245, 157, 36);
+                color: $orange-shade;
             }
             }
         }
@@ -35,16 +33,5 @@
         margin-top: 20px;
         height: 5vh;
         font-size: 40px;
-        // span{
-        //     background-color: silver;
-        // }
-        // .o{
-        //     background-color: sandybrown;
-        // }
-        // .t{
-        //     background-color: sandybrown;
-
-        // }
     }
 }
-// make slide-in menu from left to right.

@@ -15,7 +15,6 @@ const SearchResult = (props) => {
 
     useEffect(() => {
         searchResultConfig(searchContextInput)
-            // .then(res => console.log(res.data))
             .then(res => setSearchData(res.data))
             .catch(error => console.error(error))
     }, [param])
@@ -23,25 +22,8 @@ const SearchResult = (props) => {
     if (!searchData && !fetched) {
         return <Loading />
     }
-    // else if (retrieved) {
 
-    //     return (
-    //         <div className='brewery-container'>
-    //             <h2>Retrieved Result!!</h2>
-    //             {retrieved.map((brewery) => (
-    //                 <Link key={brewery.id} className='brewery-link' to={{
-    //                     pathname: `brewery/${brewery.id}`, state: { id: `${brewery.id}` }
-    //                 }}>
-    //                     <li key={retrieved.id} className='brewery-name'>{brewery.name} ({brewery.city}, {brewery.state})</li>
-    //                 </Link>
-    //             ))}
-    //         </div>
-    //     )
-    // } 
     else {
-        // localStorage.setItem('fetched', searchData)
-        // retrieved = localStorage.getItem('fetched')
-        // console.log('retrieved:', retrieved);
 
         const { id, name, website_url, brewery_type, phone, country, state, city, street, postal_code } = searchData
 

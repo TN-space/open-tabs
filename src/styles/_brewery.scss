@@ -7,7 +7,7 @@
     flex-direction: column;
     align-self: center;
     padding: 20px 80px 50px;
-    background-color: rgba(255,255,255,0.2);
+    background-color: $transparent-white;
     // justify-content: center;
     // align-items: center;
 
@@ -25,8 +25,7 @@
             text-decoration: none;
             color: inherit;
             &:hover{
-                // font-size: 25px;
-                color: rgb(245, 157, 36);
+                color: $orange-shade;
             }
         }
 
@@ -44,12 +43,12 @@
             font-weight: bold;
             border-radius: 5px;
             border: none;
-            background-color:  rgb(243, 232, 75);
+            background-color: $yellow-tint;
             cursor: pointer;  
             outline: none;
 
             &:hover {
-              background-color:  rgb(245, 157, 36);
+              background-color: $orange-shade;
               color: rgba(255,255,255,1);
               
             }

@@ -12,17 +12,17 @@
 
     .dev{
         span{
-            color:  rgb(243, 232, 75);
+            color: $yellow-tint;
         }
 
         .info{
             font-weight: bold;
             a{
-                color: rgb(245, 157, 36);
+                color: $orange-shade;
             }
         }
         .help{
-            background-color: rgba(255,255,255,0.2);
+            background-color: $transparent-white;
             text-align: center;
             padding-top: 5px;
             padding-bottom: 5px;

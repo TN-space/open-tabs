@@ -3,7 +3,6 @@
 
   display: flex;
   flex-direction: column;
-  // margin: 20px;
   font-size: 25px;
   padding-bottom: 100px;
  
@@ -21,45 +20,20 @@
       list-style-type: none;
       color: white;
       &:hover {
-        background-color: rgba(255,255,255,0.2);
+        background-color: $transparent-white;
         width: inherit;
       }
 
       .bottleCap {
-        color: rgb(243, 232, 75);
+        color: $yellow-tint;
         margin-right: 10px;
       }
 
       .location {
-        color: rgb(245, 157, 36);
+        color: $orange-shade;
         font-size: 22px;
         margin-left: 10px;
       }
     }
-    // li:before{
-    //     content: '';
-    //     display: inline-block;
-    //     height: 30px;
-    //     width: 30px;
-    //     color: white;
-    //     border-radius: 80%;
-    //     // background-image: url("../assets/wheat2.jpg");
-    //     background-color: white;
-    // }
-
-    // li {
-    //   color: white;
-    //   text-decoration: none;
-    //   list-style-type: none;
-    //   font-size: 20px;
-    // }
-    // list-style: square inside url("wheat.png")
-
   }
-  
-      
-  // li:visited {
-  //       color: inherit;
-  //       text-decoration: none;
-  //    }
 }
