@@ -2,28 +2,23 @@ import React from 'react'
 import loading from '../../assets/cheer.gif'
 
 const Loading = () => {
-    const loadingS = {
-        width: '100%',
-        heigh: '100%',
+    const loadingStyling = {
         display: 'flex',
         justifyContent: 'center',
         alignItems: 'center',
-        // margin: 'auto',
-        backgroundColor: 'rgba(51, 63, 82, 1)',
         zIndex: '7',
-        // padding: '20%'
         opacity: '0.8',
     }
 
-    const imageS = {
-        // height: '300px',
-        // width: '300px',
+    const imageStyling = {
+        height: '540px',
+        width: '720px',
         borderRadius: '50%'
     }
 
     return (
-        <div className='loading' style={loadingS}>
-            <img style={imageS} src={loading} alt='cheer!!' />
+        <div className='loading' style={loadingStyling}>
+            <img style={imageStyling} src={loading} alt='cheer!!' />
         </div>
     )
 }

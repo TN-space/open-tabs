@@ -9,7 +9,7 @@ const SearchResult = (props) => {
     const [searchData, setSearchData] = useState(null)
     const searchContextInput = useContext(SearchContext)
     let param = props.match.params.result
-    let fetched, retrieved
+    let fetched
 
 
 
@@ -19,8 +19,6 @@ const SearchResult = (props) => {
             .then(res => setSearchData(res.data))
             .catch(error => console.error(error))
     }, [param])
-
-    // console.log('pathname:', window.location.pathname.substr(8));
 
     if (!searchData && !fetched) {
         return <Loading />
@@ -52,7 +50,6 @@ const SearchResult = (props) => {
         } else {
             return (
                 <div className='brews-container'>
-                    {/* <h2>Search Result!!</h2> */}
                     {searchData.map((brewery) => (
                         <ul>
                             <Link key={brewery.id} className='brew-link' to={{

@@ -10,7 +10,6 @@ const Brewery = (props) => {
 
     useEffect(() => {
         lookUpBreweryConfig(id)
-            // .then(res => console.log(res.data))
             .then(res => setBrewery(res.data))
             .catch(error => console.error(error))
     }, [])
