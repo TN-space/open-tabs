@@ -1,4 +1,4 @@
-import React, { Fragment } from 'react'
+import React from 'react'
 import loading from '../../assets/cheer.gif'
 
 const Loading = () => {
