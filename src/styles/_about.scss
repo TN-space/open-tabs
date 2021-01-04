@@ -1,0 +1,33 @@
+.about-page{
+    margin: 0 25px 20px;
+    font-size: 20px;
+
+    h3{
+        margin: 0;
+    }
+
+    .app{
+        margin: 0 20px;
+    }
+
+    .dev{
+        span{
+            color:  rgb(243, 232, 75);
+        }
+
+        .info{
+            font-weight: bold;
+            i{
+                // font-size: 20px;
+                // font-weight: bold;
+            }
+            a{
+                color: rgb(245, 157, 36);
+            }
+        }
+        .help{
+text-align: center;
+        }
+        
+    }
+}
