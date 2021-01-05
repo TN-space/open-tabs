@@ -7,19 +7,18 @@ import { GiBottleCap } from 'react-icons/gi'
 
 const SearchResult = (props) => {
     const [searchData, setSearchData] = useState(null)
-    const searchContextInput = useContext(SearchContext)
-    let param = props.match.params.result
-    let fetched
+    let searchInput = props.match.params.result
 
-
+    // 2nd way to get searchInput: from searchContext
+    // const searchContextInput = useContext(SearchContext)
 
     useEffect(() => {
-        searchResultConfig(searchContextInput)
+        searchResultConfig(searchInput)
             .then(res => setSearchData(res.data))
             .catch(error => console.error(error))
-    }, [param])
+    }, [searchInput])
 
-    if (!searchData && !fetched) {
+    if (!searchData) {
         return <Loading />
     }
 
@@ -28,7 +27,7 @@ const SearchResult = (props) => {
         const { id, name, website_url, brewery_type, phone, country, state, city, street, postal_code } = searchData
 
         if (searchData.length === 0) {
-            return (<h1>Results not found!</h1>)
+            return (<h1 className='no-found'>No Results Found For <span>{searchInput}</span>!</h1>)
         } else {
             return (
                 <div className='brews-container'>
