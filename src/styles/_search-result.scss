@@ -12,14 +12,12 @@
   flex-direction: column;
   font-size: 25px;
   padding-bottom: 100px;
+  a {
+    text-decoration: none;
+  }
  
   ul {
     margin: 7px;
-
-    a {
-      text-decoration: none;
-    }
-
     li{
       display: flex;
       align-items: center;

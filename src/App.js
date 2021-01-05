@@ -6,7 +6,6 @@ import Home from './components/pages/Home'
 import About from './components/pages/About'
 import SearchResult from './components/SearchResult'
 import Brewery from './components/Brewery'
-import hero from './assets/hero.jpg'
 import './styles/App.scss'
 
 export const SearchContext = React.createContext()
@@ -34,35 +33,8 @@ function App() {
     }
   }
 
-  const imageStyle = {
-    // // width: "100%",
-    // // when search for 'dog', too many items that extends pass the height -- fix this
-    // // height: "100%",
-    // margin: '0',
-    // // issue: white space surrounding the div
-
-    // // backgroundImage: `url(${hero})`,
-    // // backgroundRepeat: 'no-repeat',
-    // // backgroundPosition: 'center center',
-    // // backgroundSize: 'contain',
-    // // backgroundAttachment: 'fixed',
-    // background:
-    //   // set gradient
-    //   `linear-gradient(
-    //     rgba(0, 0, 0, 0.7),
-    //     rgba(0, 0, 0, 0.7)
-    //   ),
-    // url(${hero})`,
-    // backgroundRepeat: 'no-repeat',
-    // backgroundSize: 'cover',
-    // backgroundPosition: `50%`,
-    // // backgroundAttachment: 'fixed',
-    // zIndex: '-7',
-
-  };
-
   return (
-    <div style={imageStyle} className='App'>
+    <div className='App'>
       <SearchContext.Provider value={searchInput}>
         <Header />
         <Form className="search-bar" onSubmit={getSearchResult}>
