@@ -2,12 +2,15 @@
     margin: 0 25px 20px;
     font-size: 20px;
 
-    h3{
-        margin: 0;
-    }
-
     .app{
         margin: 0 20px;
+        h3{
+            margin: 0;
+        }
+        #current{
+            color: $orange-shade;
+            font-size: 22px;
+        }
     }
 
     .dev{

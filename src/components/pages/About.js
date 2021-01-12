@@ -5,7 +5,7 @@ const About = () => {
         <div className="about-page">
             <div className="app">
                 <h2>About the application</h2>
-                <h3>version 1</h3>
+                <h3>version 1 <span id="current">(Current)</span></h3>
                 <ul>
                     <li>Front end React application with vision for later versions.</li>
                     <li>Using keyword to search for results (keyword can be a location or a name).</li>
