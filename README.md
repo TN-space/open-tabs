@@ -8,7 +8,7 @@ user can search for a brewery specifically by name, or for breweries by location
 
 - [Front-end Repo](https://github.com/TN-space/open-tabs)
 <!-- Add deploy page later -->
-- [Front-end Deployed - not yet deployed](https://github.com/TN-space/open-tabs)
+- [Front-end Deployed](https://musing-poincare-e3ca99.netlify.app)
 
 ### Planning Story
 #### Technologies Used

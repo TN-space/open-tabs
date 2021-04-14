@@ -14,7 +14,7 @@ const About = () => {
 
                 <h3>version 2</h3>
                 <ul>
-                    <li>Using C++ to add a back end.</li>
+                    <li>Adding a back end.</li>
                     <li>Back end can perform all basic CRUD (Create, Read, Update, Delete)</li>
                     <li>Possible user authentication.</li>
                 </ul>
